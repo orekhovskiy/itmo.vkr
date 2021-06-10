@@ -1,0 +1,13 @@
+<div class="container" id="container">
+    <div class="row">
+        <div class="col">
+            <video id="localVideo" (loadedmetadata)="logVideoEvent('Local')" playsinline autoplay muted></video>
+        </div>
+    </div>
+    <div class="col box">
+        <button class="btn btn-primary" id="startButton" (click)="start()">Start</button>
+        <button class="btn btn-success" id="callButton" [disabled]="true" (click)="call()">Call</button>
+        <button class="btn btn-danger" id="hangupButton" [disabled]="true" (click)="hangup()">Hang Up</button>
+    </div>
+</div>
+

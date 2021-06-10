@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="Client.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Client"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <TextBlock FontSize="20">Select input device:</TextBlock>
+                <ComboBox x:Name="inputDevice" Height = "Auto" Width = "Auto"/>
+            </StackPanel>
+            <Button Grid.Column="2" x:Name="createOffer" Click="CreateOffer" Height = "Auto" Width = "Auto" Content="Create Offer"/>
+        </Grid>
+        <MediaPlayerElement Grid.Row="1" x:Name="localVideoPlayerElement" PosterSource="Assets/poster.png" />
+    </Grid>
+
+</Page>
